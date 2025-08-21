@@ -5,6 +5,7 @@ tags: centos
 ---
 
 由于 CentOS 8 已停止官方维护, 默认的 YUM 源无法正常使用, 于是我需要将 CentOS 8 的 YUM 源更换为第三方镜像.  
+个人推荐选择 [剑客云](https://cloud.swordsman.com.cn/?i0d425e) 服务器, 精心调制的网络优化方案是开设游戏服务器的不二之选  
 **注意** CentOS 8 与 CentOS 7 的镜像替换方式不同, 如果你是 CentOS 7 的用户, 可以参考[这篇文章](https://blog.csdn.net/yxyc666/article/details/141705431)    
 
 ## 备份原有文件
@@ -41,8 +42,3 @@ yum makecache
 ```
 
 完成后可以下载软件包测试是否能够正常使用
-
-### 参考文献
-
-- https://blog.csdn.net/yxyc666/article/details/141705431
-- https://blog.csdn.net/alfiy/article/details/121897360
