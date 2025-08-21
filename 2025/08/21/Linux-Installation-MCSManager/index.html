@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   
   
-  <title>苏打的小窝</title>
+  <title>Linux 安装 MCSManager | 苏打的小窝</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="苏打的小窝">
-<meta property="og:url" content="https://bakingsoda383.github.io/">
+  <meta name="description" content="该文章讲述如何在 Linux 环境下安装并使用 MCSManager 搭建 MC 服务器 快速下载如果你希望你的 MCSManager 可以自动更新, 可以试试官方所给的脚本安装因为需要注册到系统服务，一键安装脚本必须使用 root 权限运行   12345sudo su -c &quot;wget -qO- https:&#x2F;&#x2F;script.mcsmanager.com&#x2F;setup_cn.sh |">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux 安装 MCSManager">
+<meta property="og:url" content="https://bakingsoda383.github.io/2025/08/21/Linux-Installation-MCSManager/">
 <meta property="og:site_name" content="苏打的小窝">
+<meta property="og:description" content="该文章讲述如何在 Linux 环境下安装并使用 MCSManager 搭建 MC 服务器 快速下载如果你希望你的 MCSManager 可以自动更新, 可以试试官方所给的脚本安装因为需要注册到系统服务，一键安装脚本必须使用 root 权限运行   12345sudo su -c &quot;wget -qO- https:&#x2F;&#x2F;script.mcsmanager.com&#x2F;setup_cn.sh |">
 <meta property="og:locale">
+<meta property="article:published_time" content="2025-08-21T05:49:11.000Z">
+<meta property="article:modified_time" content="2025-08-21T13:50:38.160Z">
 <meta property="article:author" content="BakingSoda383">
+<meta property="article:tag" content="centos, linux, mc, mcsm">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="苏打的小窝" type="application/atom+xml">
@@ -69,9 +74,7 @@
 </header>
 
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Linux-Installation-MCSManager" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-Linux-Installation-MCSManager" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2025/08/21/Linux-Installation-MCSManager/" class="article-date">
   <time class="dt-published" datetime="2025-08-21T05:49:11.000Z" itemprop="datePublished">2025-08-21</time>
@@ -84,8 +87,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/08/21/Linux-Installation-MCSManager/">Linux 安装 MCSManager</a>
+    <h1 class="p-name article-title" itemprop="headline name">
+      Linux 安装 MCSManager
     </h1>
   
 
@@ -152,62 +155,19 @@
     </footer>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-centos-8-yum" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2025/08/21/centos-8-yum/" class="article-date">
-  <time class="dt-published" datetime="2025-08-21T05:19:27.000Z" itemprop="datePublished">2025-08-21</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/2025/08/21/centos-8-yum/">CentOS 8 替换 YUM 源</a>
-    </h1>
+    <a href="/2025/08/21/centos-8-yum/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Älter</strong>
+      <div class="article-nav-title">CentOS 8 替换 YUM 源</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <p>由于 CentOS 8 已停止官方维护, 默认的 YUM 源无法正常使用, 于是我需要将 CentOS 8 的 YUM 源更换为第三方镜像.<br>个人推荐选择 <a target="_blank" rel="noopener" href="https://cloud.swordsman.com.cn/?i0d425e">剑客云</a> 服务器, 精心调制的网络优化方案是开设游戏服务器的不二之选<br><strong>注意</strong> CentOS 8 与 CentOS 7 的镜像替换方式不同, 如果你是 CentOS 7 的用户, 可以参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/yxyc666/article/details/141705431">这篇文章</a>    </p>
-<h2 id="备份原有文件"><a href="#备份原有文件" class="headerlink" title="备份原有文件"></a>备份原有文件</h2><p>虽然默认的 YUM 源无法正常使用, 但保险起见, 我们需要先备份相关文件<br>将 <code>/etc/yum.repos.d/</code> 里面的 <code>.repo</code> 文件添加后缀名, 防止被后续操作覆盖  </p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /etc/yum.repos.d/</span><br><span class="line"><span class="comment"># 不同版本内部文件可能有所不同, 这里只做部分演示</span></span><br><span class="line"><span class="built_in">mv</span> CentOS-Linux-BaseOS.repo CentOS-Linux-BaseOS.repo.bak</span><br><span class="line"><span class="built_in">mv</span> CentOS-Linux-AppStream.repo CentOS-Linux-AppStream.repo.bak</span><br><span class="line"><span class="built_in">mv</span> CentOS-Linux-Extras.repo CentOS-Linux-Extras.repo.bak</span><br><span class="line"><span class="comment"># mv ......</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="下载第三方镜像"><a href="#下载第三方镜像" class="headerlink" title="下载第三方镜像"></a>下载第三方镜像</h2><p>使用 <code>wget</code> 下载阿里云提供的 CentOS 8 镜像源<br>可以根据自身需要来选择是否下载 EPEL  </p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">wget -O /etc/yum.repos.d/CentOS-Linux-BaseOS.repo https://mirrors.aliyun.com/repo/Centos-vault-8.5.2111.repo</span><br><span class="line">wget -O /etc/yum.repos.d/epel-archive.repo https://mirrors.aliyun.com/repo/epel-archive-8.repo</span><br></pre></td></tr></table></figure>
-
-<h2 id="应用更改"><a href="#应用更改" class="headerlink" title="应用更改"></a>应用更改</h2><p>执行以下命令清理旧缓存并生成新的缓存</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yum clean all</span><br><span class="line">yum makecache</span><br></pre></td></tr></table></figure>
-
-<p>完成后可以下载软件包测试是否能够正常使用</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://bakingsoda383.github.io/2025/08/21/centos-8-yum/" data-id="cmelgmgco0001fgv59iph2n17" data-title="CentOS 8 替换 YUM 源" class="article-share-link"><span class="fa fa-share">Teilen</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/centos/" rel="tag">centos</a></li></ul>
-
-    </footer>
-  </div>
   
 </article>
-
-
-
-  
 
 
 </section>
